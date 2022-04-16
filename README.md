@@ -1,6 +1,6 @@
 # Memory
 
-Memory is a NodeJS Web Application for keeping records in an old school UI way. I created Memory to explore the capability of NodeJS being a newbie in the Backend world.
+Memory is a NodeJS Web Application for keeping records in an old school UI way. I created Memory to explore the capability of NodeJS being new to NodeJS.
 It was created with -
 - Express
 - Pug (View engine)
