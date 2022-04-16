@@ -1,0 +1,1 @@
+document.head.getElementsByTagName('meta')[3].content = "width=device-width, initial-scale='0'"

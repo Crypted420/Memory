@@ -1,0 +1,386 @@
+@import 'flex';
+@import 'config';
+
+section.auth {
+    width:100%;
+    height:90%;
+    margin:0 auto;
+    background-color: $otherColor;
+    @include flexContent(center, column);
+    overflow-y: scroll;
+    .messagesBx{
+        width:100%;
+        height:120px;
+        position: absolute;
+        top:3rem;
+        overflow-x: hidden;
+        transform: translateY(10px);
+        @include flexContent(flex-end, default);
+        background: transparent;
+        display: none !important;
+        .message{
+            width:90%;
+            height:100px;
+            border-radius:2px;
+            font-family: $otherFont;
+            background:white;
+            color: black;
+            float: right;
+            text-decoration: none;
+            padding:10px;
+            padding-bottom: 40px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            @include flexContent(center, column);
+            transform: scale(0.8);
+            span{
+                display: block;
+                width: 100%;
+                height:50%;
+                &:nth-child(1){
+                    font-size:1.2rem;
+                    color:red;
+                }
+                &:nth-child(2){
+                    font-size: 0.8rem;
+                    padding-top: 2px;
+
+                }
+            }
+            span#success{
+                &:nth-child(1){
+                    font-size:1.2rem;
+                    color:lightgreen;
+                }
+                &:nth-child(2){
+                    font-size: 0.8rem;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+    .mobile-message{
+        width:100%;
+        height:50px;
+        overflow-x: hidden;
+        padding-bottom: 5px;
+        @include flexContent(center, default);
+        opacity: 1;
+        top:4rem;
+        position: absolute;
+        .message-m{
+            width:90%;
+            height:100%;
+            border-radius:2px;
+            font-family: $otherFont;
+            background:white;
+            color: black;
+            float: right;
+            text-decoration: none;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            @include flexContent(center, row);
+            span{
+                display: block;
+                height:100%;
+                @include flexContent(center, default);
+                &:nth-child(1){
+                    font-size:1rem;
+                    color:white;
+                    width: 15%;
+                    background-color: red;
+                }
+                &:nth-child(2){
+                    padding: 10px;
+                    width: 85%;
+                }
+            }
+            span#success{
+                &:nth-child(1){
+                    font-size:1rem;
+                    color:white;
+                    background-color: green;
+                }
+                &:nth-child(2){
+                    color: green !important;
+                    padding-top: 0px;
+                }
+                
+            }
+        }
+    }
+    .login{
+        width:90%;
+        height:auto;
+        padding:10px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        border-radius:1px;
+        display: block;
+        transform:scale(0.99);
+        margin-top: 50px;
+        .eye{
+            position: absolute;
+            right: 0;
+            transform: translate(-2rem, -2rem);
+            cursor: pointer;
+        }
+        padding: {
+            bottom: 20px;
+            top:20px;
+            left: 10px;
+            right:10px;
+        }
+        
+        h2{
+            font-weight: 600;   
+            font-size: 1.4rem;         
+            transform: translateX(10px);
+            font-family: $otherFont;
+        }
+        form{
+            margin-top:20px;
+            padding: {
+                left:10px;
+                right:10px;
+            }
+            p{
+                color:gray;
+                font-size: 0.7rem;
+                padding:5px;
+            }
+            input{
+                display: block;
+                width:100%;
+                height:40px;
+                outline: none;
+                border: 1px solid $otherColor;
+                border-radius: 2px;
+                font-size: 12px;
+                text-indent: 10px;
+                font-family: $primaryFont;
+                color:gray;
+                transition: 0.2s ease-out all;
+                &:focus{
+                    box-shadow: 0px 0px 1px 2px rgba(24, 118, 242, 0.189);
+                    border:1px solid transparent;
+                }
+                &[type="submit"]{
+                    margin-top: 20px;
+                    background-color: #1877f2;
+                    border:0;
+                    height:40px;
+                    font-weight: 500;
+                    font-size:0.9rem;
+                    color:white;
+                    font-family: $otherFont;
+                    cursor: pointer;
+                }
+            }
+            label{
+                display: block;
+                font-size:12px;
+                padding-bottom: 5px;
+                &[for="password"]{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    p{
+        margin-top:10px;
+        font-size: 0.8rem;
+        cursor:pointer;
+        &#new-user{
+            background: #fff;
+            padding:10px;
+            border-radius:4px;
+            border:1px solid #d9d9d9;
+            box-shadow: 0 1px 3px #0000000d, 0 1px 1px #00000006;
+            font-weight: 600;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    
+    .create{
+        @extend .login;
+        form{
+            label[for='email']{
+                margin-top:inherit;
+            }
+            
+        }
+        .bi{
+            cursor:pointer;
+        }
+    }
+}
+
+// Wider screens 
+@media screen and (min-width:768px) {
+    section.auth {
+        width:100%;
+        height:90%;
+        margin:0 auto;
+        background-color: $otherColor;
+        @include flexContent(center, column);
+        .messagesBx{
+            width:100%;
+            height:200px;
+            background: transparent;
+            position: absolute;
+            top:1rem;
+            padding-right: 20px;
+            overflow-x: hidden;
+            display: flex !important;
+            .message{
+                width:22%;
+                height:100px;
+                border-radius:2px;
+                font-family: $otherFont;
+                background:white;
+                color: black;
+                float: right;
+                text-decoration: none;
+                padding:10px;
+                padding-bottom: 20px;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+                @include flexContent(center, column);
+                transform: scale(1) translateY(0rem);
+                span{
+                    display: block;
+                    width: 100%;
+                    height:50%;
+                    &:nth-child(1){
+                        font-size:1.5rem;
+                        color:red;
+                    }
+                    &:nth-child(2){
+                        padding-top: 0px;
+                    }
+                }
+                span#success{
+                    &:nth-child(1){
+                        font-size:1.5rem;
+                        color:lightgreen;
+                    }
+                    &:nth-child(2){
+                        padding-top: 0px;
+                    }
+                    
+                }
+            }
+        }
+        .mobile-message{
+            display: none;
+        }
+        
+        .login{
+            width:30%;
+            height:auto;
+            padding:10px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            border-radius:1px;
+            display: block;
+            transform:scale(0.99);
+            .eye{
+                position: absolute;
+                right: 0;
+                transform: translate(-2rem, -2rem);
+                cursor: pointer;
+            }
+            padding: {
+                bottom: 40px;
+                top:20px;
+                left: 10px;
+                right:10px;
+            }
+            
+            h2{
+                font-weight: 600;  
+                font-size: 1.5rem;          
+                transform: translateX(10px);
+            }
+            form{
+                margin-top:20px;
+                padding: {
+                    left:10px;
+                    right:10px;
+                }
+                p{
+                    color:gray;
+                    font-size: 0.7rem;
+                    padding:5px;
+                }
+                input{
+                    display: block;
+                    width:100%;
+                    height:40px;
+                    outline: none;
+                    border: 1px solid $otherColor;
+                    border-radius: 2px;
+                    font-size: 14px;
+                    text-indent: 10px;
+                    font-family: $primaryFont;
+                    color:gray;
+                    transition: 0.2s ease-out all;
+                    &:focus{
+                        box-shadow: 0px 0px 1px 2px rgba(24, 118, 242, 0.189);
+                        border:1px solid transparent;
+                    }
+                    &[type="submit"]{
+                        margin-top: 20px;
+                        background-color: #1877f2;
+                        border:0;
+                        height:50px;
+                        font-weight: 500;
+                        font-size:1rem;
+                        color:white;
+                        
+                    }
+                }
+                label{
+                    display: block;
+                    font-size:14px;
+                    padding-bottom: 5px;
+                    &[for="password"]{
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+        p{
+            margin-top:10px;
+            font-size: 0.8rem;
+            cursor:pointer;
+            &#new-user{
+                background: #fff;
+                padding:10px;
+                border-radius:4px;
+                border:1px solid #d9d9d9;
+                box-shadow: 0 1px 3px #0000000d, 0 1px 1px #00000006;
+                font-weight: 600;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    
+        
+        .create{
+            form{
+                label[for='email']{
+                    margin-top:inherit;
+                }
+                
+            }
+            .bi{
+                cursor:pointer;
+            }
+        }
+    }
+}

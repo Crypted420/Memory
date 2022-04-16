@@ -1,0 +1,1454 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Open+Sans:wght@300;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,500&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Open+Sans:wght@300;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,500&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+button, input {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+button, input {
+  font-family: "Roboto", sans-serif;
+}
+
+section.auth, section.auth.add-record {
+  width: 100%;
+  height: 90%;
+  margin: 0 auto;
+  background-color: rgba(233, 233, 233, 0.726);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+section.auth .messagesBx {
+  width: 100%;
+  height: 120px;
+  position: absolute;
+  top: 3rem;
+  overflow-x: hidden;
+  transform: translateY(10px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: default;
+  background: transparent;
+  display: none !important;
+}
+section.auth .messagesBx .message {
+  width: 90%;
+  height: 100px;
+  border-radius: 2px;
+  font-family: "Open Sans", sans-serif;
+  background: white;
+  color: black;
+  float: right;
+  text-decoration: none;
+  padding: 10px;
+  padding-bottom: 40px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: scale(0.8);
+}
+section.auth .messagesBx .message span {
+  display: block;
+  width: 100%;
+  height: 50%;
+}
+section.auth .messagesBx .message span:nth-child(1) {
+  font-size: 1.2rem;
+  color: red;
+}
+section.auth .messagesBx .message span:nth-child(2) {
+  font-size: 0.8rem;
+  padding-top: 2px;
+}
+section.auth .messagesBx .message span#success:nth-child(1) {
+  font-size: 1.2rem;
+  color: lightgreen;
+}
+section.auth .messagesBx .message span#success:nth-child(2) {
+  font-size: 0.8rem;
+  padding-top: 10px;
+}
+section.auth .mobile-message {
+  width: 100%;
+  height: 50px;
+  overflow-x: hidden;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: default;
+  opacity: 1;
+  top: 4rem;
+  position: absolute;
+}
+section.auth .mobile-message .message-m {
+  width: 90%;
+  height: 100%;
+  border-radius: 2px;
+  font-family: "Open Sans", sans-serif;
+  background: white;
+  color: black;
+  float: right;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+section.auth .mobile-message .message-m span {
+  display: block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: default;
+}
+section.auth .mobile-message .message-m span:nth-child(1) {
+  font-size: 1rem;
+  color: white;
+  width: 15%;
+  background-color: red;
+}
+section.auth .mobile-message .message-m span:nth-child(2) {
+  padding: 10px;
+  width: 85%;
+}
+section.auth .mobile-message .message-m span#success:nth-child(1) {
+  font-size: 1rem;
+  color: white;
+  background-color: green;
+}
+section.auth .mobile-message .message-m span#success:nth-child(2) {
+  color: green !important;
+  padding-top: 0px;
+}
+section.auth .login, section.auth .create {
+  width: 90%;
+  height: auto;
+  padding: 10px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  border-radius: 1px;
+  display: block;
+  transform: scale(0.99);
+  margin-top: 50px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+section.auth .login .eye, section.auth .create .eye {
+  position: absolute;
+  right: 0;
+  transform: translate(-2rem, -2rem);
+  cursor: pointer;
+}
+section.auth .login h2, section.auth .create h2 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  transform: translateX(10px);
+  font-family: "Open Sans", sans-serif;
+}
+section.auth .login form, section.auth .create form {
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+section.auth .login form p, section.auth .create form p {
+  color: gray;
+  font-size: 0.7rem;
+  padding: 5px;
+}
+section.auth .login form input, section.auth .create form input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: 1px solid rgba(233, 233, 233, 0.726);
+  border-radius: 2px;
+  font-size: 12px;
+  text-indent: 10px;
+  font-family: "Roboto", sans-serif;
+  color: gray;
+  transition: 0.2s ease-out all;
+}
+section.auth .login form input:focus, section.auth .create form input:focus {
+  box-shadow: 0px 0px 1px 2px rgba(24, 118, 242, 0.189);
+  border: 1px solid transparent;
+}
+section.auth .login form input[type=submit], section.auth .create form input[type=submit] {
+  margin-top: 20px;
+  background-color: #1877f2;
+  border: 0;
+  height: 40px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+section.auth .login form label, section.auth .create form label {
+  display: block;
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+section.auth .login form label[for=password], section.auth .create form label[for=password] {
+  margin-top: 20px;
+}
+section.auth p, section.auth.add-record p {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+section.auth p#new-user {
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 1px 3px #0000000d, 0 1px 1px #00000006;
+  font-weight: 600;
+}
+section.auth p a, section.auth.add-record p a {
+  text-decoration: none;
+  color: black;
+}
+section.auth .create form label[for=email] {
+  margin-top: inherit;
+}
+section.auth .create .bi {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  section.auth {
+    width: 100%;
+    height: 90%;
+    margin: 0 auto;
+    background-color: rgba(233, 233, 233, 0.726);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  section.auth .messagesBx {
+    width: 100%;
+    height: 200px;
+    background: transparent;
+    position: absolute;
+    top: 1rem;
+    padding-right: 20px;
+    overflow-x: hidden;
+    display: flex !important;
+  }
+  section.auth .messagesBx .message {
+    width: 22%;
+    height: 100px;
+    border-radius: 2px;
+    font-family: "Open Sans", sans-serif;
+    background: white;
+    color: black;
+    float: right;
+    text-decoration: none;
+    padding: 10px;
+    padding-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: scale(1) translateY(0rem);
+  }
+  section.auth .messagesBx .message span {
+    display: block;
+    width: 100%;
+    height: 50%;
+  }
+  section.auth .messagesBx .message span:nth-child(1) {
+    font-size: 1.5rem;
+    color: red;
+  }
+  section.auth .messagesBx .message span:nth-child(2) {
+    padding-top: 0px;
+  }
+  section.auth .messagesBx .message span#success:nth-child(1) {
+    font-size: 1.5rem;
+    color: lightgreen;
+  }
+  section.auth .messagesBx .message span#success:nth-child(2) {
+    padding-top: 0px;
+  }
+  section.auth .mobile-message {
+    display: none;
+  }
+  section.auth .login, section.auth .create {
+    width: 30%;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    border-radius: 1px;
+    display: block;
+    transform: scale(0.99);
+    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  section.auth .login .eye, section.auth .create .eye {
+    position: absolute;
+    right: 0;
+    transform: translate(-2rem, -2rem);
+    cursor: pointer;
+  }
+  section.auth .login h2, section.auth .create h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    transform: translateX(10px);
+  }
+  section.auth .login form, section.auth .create form {
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  section.auth .login form p, section.auth .create form p {
+    color: gray;
+    font-size: 0.7rem;
+    padding: 5px;
+  }
+  section.auth .login form input, section.auth .create form input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 1px solid rgba(233, 233, 233, 0.726);
+    border-radius: 2px;
+    font-size: 14px;
+    text-indent: 10px;
+    font-family: "Roboto", sans-serif;
+    color: gray;
+    transition: 0.2s ease-out all;
+  }
+  section.auth .login form input:focus, section.auth .create form input:focus {
+    box-shadow: 0px 0px 1px 2px rgba(24, 118, 242, 0.189);
+    border: 1px solid transparent;
+  }
+  section.auth .login form input[type=submit], section.auth .create form input[type=submit] {
+    margin-top: 20px;
+    background-color: #1877f2;
+    border: 0;
+    height: 50px;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+  }
+  section.auth .login form label, section.auth .create form label {
+    display: block;
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+  section.auth .login form label[for=password], section.auth .create form label[for=password] {
+    margin-top: 20px;
+  }
+  section.auth p {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  section.auth p#new-user {
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+    box-shadow: 0 1px 3px #0000000d, 0 1px 1px #00000006;
+    font-weight: 600;
+  }
+  section.auth p a {
+    text-decoration: none;
+    color: black;
+  }
+  section.auth .create form label[for=email] {
+    margin-top: inherit;
+  }
+  section.auth .create .bi {
+    cursor: pointer;
+  }
+}
+.messagesBx {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 2rem;
+  overflow-x: hidden;
+  transform: translateY(10px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: default;
+  background: transparent;
+  display: none !important;
+}
+.messagesBx .message {
+  width: 90%;
+  height: 100px;
+  border-radius: 2px;
+  font-family: "Open Sans", sans-serif;
+  background: white;
+  color: black;
+  float: right;
+  text-decoration: none;
+  padding: 10px;
+  padding-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: scale(1);
+}
+.messagesBx .message span {
+  display: block;
+  width: 100%;
+  height: 50%;
+}
+.messagesBx .message span:nth-child(1) {
+  font-size: 1.2rem;
+  color: red;
+}
+.messagesBx .message span:nth-child(2) {
+  font-size: 0.8rem;
+  padding-top: 2px;
+}
+.messagesBx .message span#success:nth-child(1) {
+  font-size: 1.2rem;
+  color: lightgreen;
+}
+.messagesBx .message span#success:nth-child(2) {
+  font-size: 0.8rem;
+  padding-top: 10px;
+}
+
+.mobile-message {
+  width: 100%;
+  height: 50px;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: default;
+  opacity: 1;
+  top: 4rem;
+  position: absolute;
+}
+.mobile-message .message-m-r {
+  width: 90%;
+  height: 100%;
+  border-radius: 2px;
+  font-family: "Open Sans", sans-serif;
+  background: white;
+  color: black;
+  float: right;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  transform: scale(0.85);
+}
+.mobile-message .message-m-r span {
+  display: block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: default;
+}
+.mobile-message .message-m-r span:nth-child(1) {
+  font-size: 1rem;
+  color: white;
+  width: 15%;
+  background-color: red;
+}
+.mobile-message .message-m-r span:nth-child(2) {
+  padding: 10px;
+  width: 85%;
+}
+.mobile-message .message-m-r span#success:nth-child(1) {
+  font-size: 1rem;
+  color: white;
+  background-color: green;
+}
+.mobile-message .message-m-r span#success:nth-child(2) {
+  color: green !important;
+  padding-top: 0px;
+}
+
+.reset-container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+}
+.reset-container p.header .material-icons {
+  font-size: 5rem;
+  color: #1877f2;
+}
+.reset-container form {
+  width: 80%;
+  height: auto;
+  padding-bottom: 30px;
+  background: white;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  transform: scale(1.2);
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.reset-container form p {
+  float: left;
+  font-size: 0.5em;
+  color: gray;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.reset-container form label.reset-l {
+  font-size: 0.9rem;
+}
+.reset-container form input {
+  display: block;
+  width: 100%;
+  border: 1px solid lightgray;
+  height: 2.4rem;
+  border-radius: 2px;
+  margin-top: 10px;
+  text-indent: 8px;
+  outline: none;
+  transition: 0.3s ease all;
+  font-size: 0.7rem;
+}
+.reset-container form input:focus {
+  box-shadow: 0px 0px 1px 2px rgba(24, 118, 242, 0.1);
+  border: 1px solid transparent;
+}
+.reset-container form input::-moz-placeholder {
+  color: rgba(128, 128, 128, 0.74);
+}
+.reset-container form input:-ms-input-placeholder {
+  color: rgba(128, 128, 128, 0.74);
+}
+.reset-container form input::placeholder {
+  color: rgba(128, 128, 128, 0.74);
+}
+.reset-container form input#reset-p {
+  margin-top: 5px;
+  border-radius: 4px;
+}
+.reset-container form button {
+  float: right;
+  width: 50px;
+  height: 25px;
+  border: 0;
+  background: #1877f2;
+  border-radius: 2px;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .messagesBx {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    background-color: transparent;
+    top: 1rem;
+    padding-right: 20px;
+    overflow-x: hidden;
+    margin-top: 5px;
+    display: flex !important;
+  }
+  .messagesBx .message {
+    width: 22%;
+    height: 100px;
+    border-radius: 2px;
+    font-family: "Open Sans", sans-serif;
+    background: white;
+    color: black;
+    float: right;
+    text-decoration: none;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .messagesBx .message span {
+    display: block;
+    width: 100%;
+    height: 50%;
+  }
+  .messagesBx .message span:nth-child(1) {
+    font-size: 1.5rem;
+    color: red;
+  }
+  .messagesBx .message span#success:nth-child(1) {
+    font-size: 1.5rem;
+    color: lightgreen;
+  }
+
+  .mobile-message {
+    width: 100%;
+    height: 50px;
+    overflow-x: hidden;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: default;
+    opacity: 1;
+    top: 4rem;
+    position: absolute;
+    display: none;
+  }
+
+  .reset-container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Open Sans", sans-serif;
+  }
+  .reset-container p.header .material-icons {
+    font-size: 5rem;
+    color: #1877f2;
+  }
+  .reset-container form {
+    width: 30%;
+    height: auto;
+    padding-bottom: 30px;
+    background: white;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    transform: scale(1.2);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .reset-container form p {
+    float: left;
+    font-size: 0.7rem;
+    color: gray;
+    margin-top: 25px;
+    cursor: pointer;
+  }
+  .reset-container form label.reset-l {
+    font-size: 0.9rem;
+  }
+  .reset-container form input {
+    display: block;
+    width: 100%;
+    border: 1px solid lightgray;
+    height: 2.4rem;
+    border-radius: 2px;
+    margin-top: 10px;
+    text-indent: 8px;
+    outline: none;
+    transition: 0.3s ease all;
+    font-size: 0.8rem;
+  }
+  .reset-container form input:focus {
+    box-shadow: 0px 0px 1px 2px rgba(24, 118, 242, 0.1);
+    border: 1px solid transparent;
+  }
+  .reset-container form input::-moz-placeholder {
+    color: rgba(128, 128, 128, 0.74);
+  }
+  .reset-container form input:-ms-input-placeholder {
+    color: rgba(128, 128, 128, 0.74);
+  }
+  .reset-container form input::placeholder {
+    color: rgba(128, 128, 128, 0.74);
+  }
+  .reset-container form input#reset-p {
+    margin-top: 5px;
+    border-radius: 4px;
+  }
+  .reset-container form button {
+    float: right;
+    width: 60px;
+    height: 30px;
+    border: 0;
+    background: #1877f2;
+    border-radius: 2px;
+    color: white;
+    margin-top: 20px;
+  }
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: rgba(233, 233, 233, 0.726);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  /* for removing the highlight */
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  font-family: "Mochiy Pop P One", sans-serif;
+  color: #1877f2;
+  padding: 10px;
+  box-shadow: none;
+  letter-spacing: 0.2rem;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: default;
+  z-index: 100000;
+}
+header h2 {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #1877f2;
+}
+header h2 span {
+  color: #1877f2;
+}
+header .profile-logout a {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: lightgray;
+  letter-spacing: normal;
+  padding-right: 20px;
+}
+header .profile-logout a i {
+  font-size: 1.4rem;
+}
+header .profile {
+  width: 20%;
+  height: 100%;
+  letter-spacing: normal;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: default;
+  color: black;
+}
+header p.icon i.bi {
+  font-size: 1.5rem;
+  padding-right: 5px;
+}
+header p.icon span {
+  display: inline-block;
+  width: 150px;
+  height: 70px;
+  background-color: #fff;
+  position: absolute;
+  margin-left: -90px;
+  margin-top: 10px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px lightgray, 0px -0.5px 1px lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 0;
+  margin-top: -10px;
+  transition: 0.2s all ease-out;
+  z-index: 100000;
+  padding-top: 0px;
+  font-size: 0.9rem;
+}
+header p.icon span i {
+  font-style: normal;
+  padding-left: 10px;
+  display: inline-block;
+  width: 100%;
+  height: 50%;
+  padding-top: 1px;
+  transform: 0.3s all linear;
+}
+header p.icon span i a {
+  text-decoration: none;
+  color: gray;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    width: 100%;
+    height: 10%;
+    font-family: "Mochiy Pop P One", sans-serif;
+    color: #1877f2;
+    padding: 10px;
+    box-shadow: 0px 1px 2px lightgray;
+    letter-spacing: 0.4rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: default;
+    z-index: 100000;
+  }
+  header h2 {
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+  header .profile-logout a {
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: lightgray;
+    letter-spacing: normal;
+    padding-right: 20px;
+  }
+  header .profile-logout a i {
+    font-size: 1.4rem;
+  }
+  header .profile {
+    width: 20%;
+    height: 100%;
+    letter-spacing: normal;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: default;
+    color: black;
+  }
+  header p.icon i.bi {
+    font-size: 1.5rem;
+    padding-right: 5px;
+  }
+  header p.icon span {
+    display: inline-block;
+    width: 150px;
+    height: 70px;
+    background-color: #fff;
+    position: absolute;
+    margin-left: -90px;
+    margin-top: 10px;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+    margin-top: -10px;
+    transition: 0.2s all ease-out;
+    z-index: 100000;
+    padding-top: 0px;
+    font-size: 0.9rem;
+  }
+  header p.icon span i {
+    font-style: normal;
+    padding-left: 10px;
+    display: inline-block;
+    width: 100%;
+    height: 50%;
+    padding-top: 5px;
+  }
+  header p.icon span i:nth-child(2) {
+    border-top: 1screen sizes px solid rgba(233, 233, 233, 0.726);
+  }
+  header p.icon span i a {
+    text-decoration: none;
+    color: gray;
+  }
+}
+main {
+  width: 100%;
+  height: 90%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: default;
+}
+main section.record-list {
+  width: 70%;
+  height: auto;
+  overflow-y: scroll;
+  background: white;
+  padding: 0px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.281);
+}
+main section.record-list .delete {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: default;
+  font-family: "Roboto", sans-serif;
+}
+main section.record-list .delete form {
+  width: 30%;
+  height: auto;
+  padding-bottom: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+  line-height: 2rem;
+}
+main section.record-list .delete form button {
+  padding: 5px;
+  color: white;
+  border: 0;
+  background-color: red;
+  font-family: "Roboto", sans-serif;
+  border-radius: 4px;
+  float: right;
+}
+main section.record-list .delete form p.cancel {
+  display: inline-block;
+  color: gray;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+main section.record-list div.title {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: default;
+  font-size: 1.8rem;
+  color: gray;
+  padding: 10px;
+}
+main section.record-list div.creation {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: default;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+main section.record-list div.creation button {
+  padding: 10px;
+  background: #1877f2;
+  color: white;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s all ease-out;
+}
+main section.record-list div.creation button:hover {
+  background-color: #fff;
+  color: #1877f2;
+  border: 1px solid #1877f2;
+}
+main section.record-list div.creation .refresh {
+  background: white;
+  border: 1px solid #1877f2;
+  color: #1877f2;
+}
+main section.record-list div.creation .refresh:hover {
+  background-color: #1877f2;
+  color: #fff;
+}
+main section.record-list div.table {
+  width: 100%;
+  height: auto;
+  overflow-y: hidden;
+}
+main section.record-list div.table .table-th {
+  width: 100%;
+  height: 50px;
+}
+main section.record-list div.table .table-th table {
+  position: relative;
+  width: 100%;
+}
+main section.record-list div.table .table-th table th {
+  text-align: center;
+  padding: 0px;
+  border: 0;
+  border-right: 0px solid gray;
+  font-weight: 500;
+  font-size: 1rem;
+  color: gray;
+  background: rgba(233, 233, 233, 0.726);
+  height: 40px;
+}
+main section.record-list div.table .table-th table th:nth-child(1) {
+  width: 10%;
+}
+main section.record-list div.table .table-th table th:nth-child(2) {
+  width: 15%;
+}
+main section.record-list div.table .table-th table th:nth-child(3) {
+  width: 50%;
+}
+main section.record-list div.table .table-th table th:nth-child(4) {
+  width: 10%;
+  border-right: 0;
+}
+main section.record-list div.table .content {
+  width: 100%;
+  height: 23rem;
+  background-color: white;
+  overflow-y: scroll;
+}
+main section.record-list div.table .content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+main section.record-list div.table .content table .nothing {
+  text-align: center;
+  color: gray;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+main section.record-list div.table .content table td {
+  margin-top: 10px;
+  text-align: center;
+  padding-top: 10px;
+  border: 0;
+  font-weight: 400;
+  font-size: 0.8rem;
+  border-top: 0px solid gray;
+  box-shadow: 0px 0px 2px lightgray;
+}
+main section.record-list div.table .content table td div {
+  display: inline-block;
+}
+main section.record-list div.table .content table td div form button {
+  background: transparent;
+  opacity: 0;
+  border: 0;
+  padding: 3px;
+  border-radius: 2px;
+  font-size: 12px;
+  transition: 0.66s all ease-in-out;
+}
+main section.record-list div.table .content table td div form button .bi-trash {
+  color: red;
+  transition: 0.66s all ease-in-out;
+}
+main section.record-list div.table .content table td:nth-child(1) {
+  width: 10%;
+  padding: 10px;
+}
+main section.record-list div.table .content table td:nth-child(2) {
+  width: 15%;
+  padding: 10px;
+}
+main section.record-list div.table .content table td:nth-child(3) {
+  width: 50%;
+  text-align: left;
+  padding: 10px;
+  line-height: 25px;
+}
+main section.record-list div.table .content table td:nth-child(3):hover > div > form button#delete {
+  opacity: 1;
+}
+main section.record-list div.table .content table td:nth-child(4) {
+  width: 10%;
+  border-right: 0;
+}
+
+section.add-record {
+  z-index: 10000000;
+}
+section.add-record form {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+section.add-record form #record-close {
+  background: transparent;
+  float: right;
+  color: gray;
+  cursor: pointer;
+}
+section.add-record form button {
+  width: 20%;
+  height: 50px;
+  background: #1877f2;
+  border: 0;
+  color: white;
+  border-radius: 4px;
+  margin-top: 24px;
+}
+section.add-record form button#record-btn {
+  width: 100%;
+  float: right;
+}
+section.add-record form div.input-general {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: default;
+  margin-top: 20px;
+}
+section.add-record form div.input-general textarea {
+  resize: none;
+  display: block;
+  outline: none;
+  border: 1px solid rgba(233, 233, 233, 0.726);
+  border-radius: 2px;
+  font-size: 14px;
+  padding: 5px 5px;
+  font-family: "Roboto", sans-serif;
+  color: gray;
+}
+section.add-record form div.input-general textarea:focus {
+  box-shadow: 0px 0px 1px 2px rgba(24, 118, 242, 0.1);
+}
+section.add-record form div.input-general div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+section.user-profile {
+  width: 100%;
+  height: 90%;
+  padding: 100px;
+}
+section.user-profile table {
+  width: 100%;
+  height: 80%;
+  border-collapse: collapse;
+}
+section.user-profile table th {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.288);
+  font-weight: 400;
+}
+section.user-profile table tr td {
+  padding: 10px;
+}
+section.user-profile table tr td:nth-child(1) {
+  width: 30%;
+}
+section.user-profile table tr td:nth-child(2) {
+  width: 70%;
+}
+section.user-profile table tr td:nth-child(even) {
+  border-bottom: 1px solid lightgray;
+}
+section.user-profile button {
+  padding: 20px;
+  background: #1877f2;
+  border: 0px;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  float: right;
+  margin-top: 20px;
+  font-weight: 400;
+  transition: 0.2s all ease-in;
+}
+section.user-profile button a {
+  text-decoration: none;
+  color: white;
+}
+section.user-profile button:hover {
+  opacity: 0.7;
+}
+section.user-profile .back-home {
+  float: left;
+  font-weight: 900;
+}
+
+section.edit-profile-container, section.add-record {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: default;
+  align-items: flex-start;
+  padding-top: 50px;
+  display: none;
+}
+section.edit-profile-container .edit-close, section.add-record .edit-close {
+  background-color: transparent;
+  float: right;
+  cursor: pointer;
+  transition: all 0.33s ease-in-out;
+}
+section.edit-profile-container .edit-close:hover, section.add-record .edit-close:hover {
+  opacity: 0.4;
+}
+section.edit-profile-container form, section.add-record form {
+  width: 40%;
+  background: white;
+  height: auto;
+  margin-top: 20px;
+  opacity: 0;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.281);
+  font-family: "Roboto", sans-serif;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+section.edit-profile-container form#edit-form, section.add-record form#edit-form {
+  transform: scale(0.7);
+}
+section.edit-profile-container form p, section.add-record form p {
+  color: gray;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+section.edit-profile-container form input, section.add-record form input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: 1px solid rgba(233, 233, 233, 0.726);
+  border-radius: 3px;
+  font-size: 14px;
+  text-indent: 10px;
+  font-family: "Roboto", sans-serif;
+  color: gray;
+  margin-top: 10px;
+  transition: 0.2s all ease-out;
+}
+section.edit-profile-container form input:focus, section.add-record form input:focus {
+  box-shadow: 0px 0px 1px 2px rgba(24, 118, 242, 0.1);
+  border: 1px solid transparent;
+}
+section.edit-profile-container form label, section.add-record form label {
+  display: block;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+section.edit-profile-container form label[for=password], section.add-record form label[for=password] {
+  margin-top: 20px;
+}
+section.edit-profile-container form select, section.add-record form select {
+  display: block;
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: 1px solid rgba(233, 233, 233, 0.726);
+  border-radius: 2px;
+  font-size: 14px;
+  text-indent: 10px;
+  font-family: "Roboto", sans-serif;
+  color: gray;
+  margin-top: 10px;
+  background-color: white;
+}
+section.edit-profile-container form select:focus, section.add-record form select:focus {
+  box-shadow: 0px 0px 1px 2px rgba(24, 118, 242, 0.1);
+}
+section.edit-profile-container form button#update, section.add-record form button#update {
+  width: 100%;
+  height: 50px;
+  margin-top: 40px;
+  background: #1877f2;
+  color: #fff;
+  border: 0px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in;
+}
+
+::-webkit-scrollbar {
+  background-color: red;
+  width: 0;
+}
+
+::-webkit-scrollbar-button {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(211, 211, 211, 0.171);
+  border-radius: 5px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: default;
+  color: slategrey;
+  display: none;
+}
+footer .footers {
+  transform: translateY(100px);
+  color: slategrey;
+}
+footer .circle {
+  transform: rotate(360deg);
+  transition: 1s all ease-out;
+}
+footer .circle-rm {
+  transform: rotate(-360deg);
+  transition: 1s all ease-out;
+}
+footer p {
+  margin-left: 20px;
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+footer p img {
+  width: 30px;
+  height: 30px;
+  float: right;
+}
+footer p:nth-child(5) {
+  width: 60%;
+  padding-right: 10px;
+  transform: scale(1);
+}
+footer p.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  opacity: 1;
+  font-size: 1rem;
+  transform: translateY(-3px);
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: default;
+}
+footer p a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: default;
+    color: slategrey;
+    display: flex;
+  }
+  footer .footers {
+    transform: translateY(100px);
+    color: slategrey;
+  }
+  footer .circle {
+    transform: rotate(360deg);
+    transition: 1s all ease-out;
+  }
+  footer .circle-rm {
+    transform: rotate(-360deg);
+    transition: 1s all ease-out;
+  }
+  footer p {
+    margin-left: 20px;
+    opacity: 0.6;
+    font-size: 0.8rem;
+  }
+  footer p img {
+    width: 30px;
+    height: 30px;
+    float: right;
+  }
+  footer p:nth-child(5) {
+    width: 60%;
+    padding-right: 10px;
+    transform: scale(1);
+  }
+  footer p.icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    opacity: 1;
+    font-size: 1rem;
+    transform: translateY(-3px);
+    box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: default;
+  }
+  footer p a {
+    text-decoration: none;
+    color: black;
+  }
+}/*# sourceMappingURL=main.css.map */
