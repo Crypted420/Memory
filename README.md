@@ -21,6 +21,6 @@ It was created with -
 
 [See it running live](https://rebrand.ly/1sqts75) 
 <br>
-Feel free to folk and make recommedation on better codes because the code is quit not impressing coming from someone new to Node.
+Feel free to folk and make recommedation on better codes because the code is quit not impressive coming from someone new to Node.
 
 
