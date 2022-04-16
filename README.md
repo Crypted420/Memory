@@ -1,5 +1,4 @@
 # Memory
-# Memory
 
 Memory is a NodeJS Web Application for keeping records in an old school UI way. I created Memory to explore the capability of NodeJS being a newbie in the Backend world.
 It was created with -
