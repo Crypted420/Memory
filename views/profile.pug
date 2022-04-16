@@ -1,0 +1,57 @@
+extends layout 
+
+block profile 
+    p.profile-logout 
+        a(href="/user/logout") #[i.bi.bi-box-arrow-right]
+block content   
+    div.messagesBx
+            if (messages.exist)
+                p.message
+                    span #[i.bi.bi-x-circle] Failed
+                    span= messages.exist
+            if (messages.success)
+                p.message
+                    span#success #[i.bi.bi-check] Success 
+                    span= messages.success
+                
+    section.edit-profile-container
+        form#edit-form(action="", method="post") 
+            h1.edit-close #[i.bi.bi-x-lg] 
+            p Update Profile Info 
+            input#username(type="text" placeholder="Enter a new username" value=user.username disabled required)
+            input#email(type="email", name="email_edit" placeholder="Email address" value=user.email disabled)
+            select#gender(name="gender" value=user.gender required) 
+                option(value="Male") Male 
+                option(value="Female") Female
+                option(value="Rather not say") Rather not say
+            input#record(type="text", name="record" placeholder="Record title" value=user.record_title required)
+            input(type="hidden", name="password" value=user.password)
+            button#update(type="submit") Update
+    section.user-profile
+        table 
+            tr 
+                th Your Profile
+                th 
+                    i(style="color:gray") #{user.record_title}
+            tr
+                td Username 
+                td  #{user.username}
+            tr
+                td Email address 
+                td #{user.email}
+            tr
+                td Gender 
+                td #{user.gender}
+            tr
+                td Total Records 
+                td #{record_count}
+        button.back-home(title="Go Home") 
+            a(href="/home/") #[i.bi.bi-arrow-left]
+        button#edit-profile Edit profile #[i.bi.bi-pencil]
+
+
+    script(src="/javascripts/profile.js")
+    script(src="/javascripts/layout.js") 
+    script(src="/javascripts/reset.js") 
+    script(src="/javascripts/viewport.js") 
+

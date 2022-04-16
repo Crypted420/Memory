@@ -1,0 +1,49 @@
+extends layout 
+block content 
+    title= title 
+    
+    div.messagesBx
+            if (messages.nullEmail)
+                p.message
+                    span #[i.bi.bi-x-circle] Failed
+                    span= messages.nullEmail
+            if (messages.sent)
+                p.message
+                    span#success #[i.bi.bi-hand-thumbs-up] Success 
+                    span= messages.sent
+            if (messages.smtp_error)
+                p.message
+                    span #[i.bi.bi-x-circle] 505 Error 
+                    span= messages.smtp_error
+            if (messages.tkSent)
+                p.message
+                    span#success #[i.bi.bi-hand-thumbs-up] Success 
+                    span= messages.tkSent
+    div.mobile-message
+            if (messages.nullEmail)
+                p.message-m-r
+                    span #[i.bi.bi-x-circle]
+                    span= messages.nullEmail
+            if (messages.sent)
+                p.message-m-r
+                    span#success #[i.bi.bi-info] 
+                    span= messages.sent
+            if (messages.smtp_error)
+                p.message-m-r
+                    span #[i.bi.bi-x-circle] 
+                    span= messages.smtp_error
+            if (messages.tkSent)
+                p.message-m-r
+                    span #[i.bi.biinfo] 
+                    span= messages.tkSent
+    div.reset-container
+        p.header 
+            span.material-icons password
+        form(action="", method="post" onsubmit="document.querySelector(.reset-btn).innerHTML = `Please wait...`") 
+            label(for="email")
+            input#email(type="email", autocomplete  name="email" placeholder="Enter registered email" required)
+            p(onclick="window.location = `/`") #[i.bi.bi-arrow-left] Back to login
+            button.reset-btn #[i.bi.bi-send]
+
+    script(src="/javascripts/reset.js") 
+    script(src="/javascripts/layout.js") 

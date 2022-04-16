@@ -1,0 +1,37 @@
+extends layout 
+block content 
+
+    section.auth
+        div.messagesBx
+            if (messages.unique_username)
+                p.message
+                    span #[i.bi.bi-x-circle] Failed
+                    span= messages.unique_username
+            if (messages.unique_email)
+                p.message
+                    span #[i.bi.bi-x-circle] Failed
+                    span= messages.unique_email
+        div.mobile-message
+            if (messages.unique_username)
+                p.message-m-r
+                    span #[i.bi.bi-x-circle]
+                    span= messages.unique_username
+            if (messages.unique_email)
+                p.message-m-r
+                    span #[i.bi.bi-x-circle]
+                    span= messages.unique_email
+        div.create
+                h2 #[i.bi.bi-arrow-left-short] REGISTER
+                form(action="", method="post" id="create-form" ) 
+                    label(for="username") Username*
+                    input(type="text", name="username" placeholder="Joe Barnes" required minlenght="3")
+                    label(for="email") E-mail*
+                    input(type="email", name="email" placeholder="memory@yahoo.com"  required)
+                    label(for="password") Password*
+                    input#password-c(type="password", name="password" placeholder="*******" required minlength="9" maxlength="12")
+                    | #[i.bi.bi-eye.eye.create_eye]
+
+                    input.create-btn(type="Submit", value="Create an account")
+    
+    script(src="/javascripts/create.js")
+    script(src="/javascripts/layout.js") 

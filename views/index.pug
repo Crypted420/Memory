@@ -1,0 +1,66 @@
+extends layout
+
+block profile
+  div.profile
+    p.icon#person #[i.bi.bi-person] Hi, #{user.username}
+      span.nav 
+        i 
+          a(href="/home" + "/profile") View profile
+        i 
+          a(href="/user/logout") Logout
+    //- p.icon #[i.bi.bi-person] Hi,
+block content   
+  section.add-record
+    form#record-form(action="", method="post" onSubmit="document.querySelector('#record-btn').textContent = 'Recording...'") 
+      h3#record-close #[i.bi.bi-x-lg]
+      p Record what You meant Forget!
+      div.input-general
+        div 
+          textarea#detail(name="detail", cols="30", rows="10" placeholder="Make sure you put all the details...." required) 
+        div 
+          input(type="text" name='title' placeholder="Title" required) 
+          input(type="date" name='date' required)   
+          input(type="time" name='time' required)
+      button#record-btn(type="submit") Record
+  main
+    section.record-list 
+      div.title 
+        p #{user.record_title} #[i.bi.bi-pencil]
+
+      div.creation
+        button.refresh(onclick="window.location.reload()") Refresh #[i.bi.bi-arrow-clockwise]
+        button.new-record New record #[i.bi.bi-plus-lg]
+
+      div.table
+        div.table-th
+           table(border="0")
+            th Date
+            th Title
+            th Description
+            th Time
+
+        div.content
+          table(border="0") 
+            each record in records 
+              tr 
+                td !{record.date}
+                td !{record.title}
+                td !{record.description}
+                  div 
+                    form(action="", method="post") 
+                      input(type="hidden", name="record_name" value=record._id)
+                      button#delete(type="submit") #[i.bi.bi-trash]
+                td !{record.time}
+
+            else 
+              tr
+                td.nothing Don`t Keep staring at me! 
+                  br 
+                  i.bi.bi-emoji-expressionless
+    section.detail
+
+
+  script(src="/javascripts/main.js") 
+  script(src="/javascripts/layout.js") 
+  script(src="/javascripts/viewport.js") 
+

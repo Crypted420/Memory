@@ -1,0 +1,58 @@
+extends layout 
+
+block content 
+
+    title= title
+
+    section.auth
+        block forms 
+        div.messagesBx
+            if (messages.error)
+                p.message
+                    span #[i.bi.bi-x-circle] Failed
+                    span The username or password you entered is incorrect!
+            if (messages.success)
+                p.message
+                    span#success #[i.bi.bi-check] Success
+                    span= messages.success
+            if (messages.reset)
+                p.message
+                    span#success #[i.bi.bi-check] Success 
+                    span= messages.reset
+        
+        div.mobile-message
+            //- p.message
+            //-     span#success #[i.bi.bi-info] 
+            //-     span Account created successfully!
+            //-     span= messages.reset
+            if (messages.error)
+                p.message-m-r
+                    span #[i.bi.bi-x-circle]
+                    span The username or password you entered is incorrect!
+            if (messages.success)
+                p.message-m-r
+                    span#success #[i.bi.bi-info] 
+                    span= messages.success
+            if (messages.reset)
+                p.message-m-r
+                    span#success #[i.bi.bi-info] Success 
+                    span= messages.reset
+                
+        div.login#lg
+            h2 LOGIN
+            form(action="", method="post" id="login-form") 
+                label(for="username") E-mail
+                input#username(type="email", name="username" placeholder="Janeth@gmail.com" required)
+                label(for="password") Password
+                input#password-l(type="password", name="password" placeholder="**********" required)
+                | #[i.bi.bi-eye.eye.login_eye]
+                input(type="Submit", value="sign in" class="password" )
+                p
+                    a(href="/user/forgot-password" style="color:#1877f2") lost password?
+                        
+        
+        p#new-user 
+            a(href="/user/create-account") Create an account
+
+    script(src="/javascripts/auth.js")
+    script(src="/javascripts/layout.js") 

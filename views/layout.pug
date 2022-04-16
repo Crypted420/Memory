@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/main.css') 
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=7")
+    meta(name="description", content="old school record keeper.")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    script(src="/gsap-public/minified/gsap.min.js") 
+    link(rel="shortcut icon", href="/images/bitmap.png", type="image/x-icon")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet")
+    script(src="/javascripts/layout.js") 
+
+  body
+    header 
+      h2.header MEMORY
+      block profile
+    footer 
+      p.icon.code
+        i.bi.bi-code.biCode
+      p.footers(style="color:#1877f2; font-family:'Mochiy Pop P One', sans-serif;padding-bottom:4px") Made with curiousity.
+      p.footers 
+        a(href="mailto:memory.customercare@gmail.com") Send a mail #[i.bi.bi-envelope]
+      p.footers 
+        a(href="https://wa.me/qr/U65XC4SNWBTC1") Direct message #[i.bi.bi-whatsapp]
+      p.image 
+        img(src="/images/Memory-logos_black.png", alt="memory", srcset="")
+    
+    block content
+

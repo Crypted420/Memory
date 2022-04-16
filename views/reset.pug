@@ -1,0 +1,14 @@
+extends layout 
+block content 
+    title= title 
+    
+    div.reset-container
+        p.header 
+            span.material-icons sync_lock
+        form(action="", method="post") 
+            label.reset-l(for="password" ) New Password
+            input#reset-p(type="password" autocomplete  name="new_password" minlength="9" maxlength="12"  required)
+            button.reset-btn Reset
+
+    script(src="/javascripts/reset.js") 
+    script(src="/javascripts/layout.js") 
